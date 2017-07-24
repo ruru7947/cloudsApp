@@ -25,6 +25,32 @@ class ViewController: UIViewController {
                 print("準備印出 result 中的資料")
                 print(ARRAY)
             }
+            
+            if let JSON = response.result.value {
+                if let dictionary = JSON as? [String: Any] {//將 JSON 物件，轉成 dictionary 的 key:value 的陣列
+                    
+                    if let value = dictionary["origin"] as? String {
+                        print("解出 key 為 origin 的值")
+                        print(value)
+                    }
+                    
+                    if let value = dictionary["url"] as? String {
+                        print("解出 key 為 url 的值")
+                        print(value)
+                    }
+                    
+                    
+                    if let value = dictionary["headers"] as? String {//解不出來，因為不是 String
+                        print("解出 key 為 headers 的值")
+                        print(value)
+                    }
+                    
+                    if let value = dictionary["args"] as? String {//解不出來，因為不是 String
+                        print("解出 key 為 args 的值")
+                        print(value)
+                    }
+                }
+            }
         }
     }
     
