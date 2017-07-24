@@ -39,12 +39,41 @@ class ViewController: UIViewController {
                         print(value)
                     }
                     
-                    
-                    if let value = dictionary["headers"] as? String {//解不出來，因為不是 String
-                        print("解出 key 為 headers 的值")
-                        print(value)
+                    //要當做 JSON 物件再解一次
+                    if let headers_dictionary = dictionary["headers"] as? [String: Any] {
+                        
+                        if let value = headers_dictionary["Accept"] as? String {
+                            print("解出 key 為 Accept 的值")
+                            print(value)
+                        }
+                        
+                        if let value = headers_dictionary["Accept-Encoding"] as? String {
+                            print("解出 key 為 Accept-Encoding 的值")
+                            print(value)
+                        }
+                        
+                        if let value = headers_dictionary["Accept-Language"] as? String {
+                            print("解出 key 為 Accept-Language 的值")
+                            print(value)
+                        }
+                        
+                        if let value = headers_dictionary["Connection"] as? String {
+                            print("解出 key 為 Connection 的值")
+                            print(value)
+                        }
+                        
+                        if let value = headers_dictionary["Host"] as? String {
+                            print("解出 key 為 Host 的值")
+                            print(value)
+                        }
+                        
+                        if let value = headers_dictionary["User-Agent"] as? String {
+                            print("解出 key 為 User-Agent 的值")
+                            print(value)
+                        }
                     }
                     
+                    //不用解了，因為沒東西
                     if let value = dictionary["args"] as? String {//解不出來，因為不是 String
                         print("解出 key 為 args 的值")
                         print(value)
