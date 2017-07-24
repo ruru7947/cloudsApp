@@ -20,6 +20,11 @@ class ViewController: UIViewController {
             print(response.response as Any)
             print(response.data as Any)
             print(response.result)
+            
+            if let ARRAY = response.result.value {
+                print("準備印出 result 中的資料")
+                print(ARRAY)
+            }
         }
     }
     
