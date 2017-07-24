@@ -15,16 +15,47 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        Alamofire.request("https://httpbin.org/get").responseJSON { response in
-            print(response.request as Any)
-            print(response.response as Any)
-            print(response.data as Any)
-            print(response.result)
+        Alamofire.request("https://api.github.com/users/octocat/repos").responseJSON { response in
             
-            if let ARRAY = response.result.value {
-                print("準備印出 result 中的資料")
-                print(ARRAY)
+            //更符合內容的命名變數名稱為 result_value
+            if let result_value = response.result.value {
+                if let array = result_value as? [Any] {//將 result_value 解讀為 任何型態 的陣列
+                    if let JSON_OBJECT = array.first {//將陣列的第1個 JSON 物件 做解析
+                        if let dictionary = JSON_OBJECT as? [String: Any] {//將 JSON 物件轉成 key-value 陣列
+                            
+                            if let value = dictionary["id"] as? Int {
+                                print("id: \(value)")
+                            }
+                            
+                            if let value = dictionary["name"] as? String {
+                                print("name: \(value)")
+                            }
+                            
+                            if let value = dictionary["private"] as? Bool {
+                                print("private: \(value)")
+                            }
+                            
+                            if let value = dictionary["homepage"] as? String {
+                                print("homepage: \(value)")
+                            } else {
+                                print("homepage: null")//不知道原始格式之下的處理
+                            }
+                        }
+                    }
+                }
             }
+        }
+        
+        Alamofire.request("https://httpbin.org/get").responseJSON { response in
+//            print(response.request as Any)
+//            print(response.response as Any)
+//            print(response.data as Any)
+//            print(response.result)
+            
+//            if let ARRAY = response.result.value {
+//                print("準備印出 result 中的資料")
+//                print(ARRAY)
+//            }
             
             if let JSON = response.result.value {
                 if let dictionary = JSON as? [String: Any] {//將 JSON 物件，轉成 dictionary 的 key:value 的陣列
