@@ -41,35 +41,10 @@ class ViewController: UIViewController {
                     
                     //要當做 JSON 物件再解一次
                     if let headers_dictionary = dictionary["headers"] as? [String: Any] {
-                        
-                        if let value = headers_dictionary["Accept"] as? String {
-                            print("解出 key 為 Accept 的值")
-                            print(value)
-                        }
-                        
-                        if let value = headers_dictionary["Accept-Encoding"] as? String {
-                            print("解出 key 為 Accept-Encoding 的值")
-                            print(value)
-                        }
-                        
-                        if let value = headers_dictionary["Accept-Language"] as? String {
-                            print("解出 key 為 Accept-Language 的值")
-                            print(value)
-                        }
-                        
-                        if let value = headers_dictionary["Connection"] as? String {
-                            print("解出 key 為 Connection 的值")
-                            print(value)
-                        }
-                        
-                        if let value = headers_dictionary["Host"] as? String {
-                            print("解出 key 為 Host 的值")
-                            print(value)
-                        }
-                        
-                        if let value = headers_dictionary["User-Agent"] as? String {
-                            print("解出 key 為 User-Agent 的值")
-                            print(value)
+                        for (key, value) in headers_dictionary {
+                            if let value_string = value as? String {
+                                print(key + ":" + value_string)
+                            }
                         }
                     }
                     
