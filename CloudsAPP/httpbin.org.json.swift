@@ -31,7 +31,7 @@ extension HttpbinOrgJson {
         }
         
         guard let url = dictionary["url"] as? String else{
-                throw DecodeJsonError.missing("url")
+            throw DecodeJsonError.missing("url")
         }
         
         self.origin = origin
