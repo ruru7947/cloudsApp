@@ -1,6 +1,0 @@
-version: "Apple Swift version 3.1 (swiftlang-802.0.53 clang-802.0.42)"
-options: "48ca9a4b0ba33ff898905f6a40b6121c"
-build_time: [554782165, 366536000]
-inputs:
-  "/Users/ruru/Desktop/CloudsAPP-2017-07-24/CloudsAPP/ViewController.swift": [554782165, 0]
-  "/Users/ruru/Desktop/CloudsAPP-2017-07-24/CloudsAPP/AppDelegate.swift": [554180570, 0]
