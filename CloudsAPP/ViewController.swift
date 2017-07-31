@@ -21,27 +21,26 @@ class ViewController: UIViewController {
             guard let resultValue = response.result.value,let array = resultValue as? [Any] else {
                 return
             }
-
-                    for JSON_OBJECT in array {
-                        guard let dictionary = JSON_OBJECT as? [String: Any] else { //將 JSON 物件轉成 key-value 陣列
-                            return
-                        }
-                        
-                        for (key, value) in dictionary {
-                            switch value {
-                            case is Int:
-                                print("\(key): \(value)(Int)")
-                            case is String:
-                                print("\(key): \(value)(String)")
-                            case is Bool:
-                                print("\(key): \(value)(Bool)")
-                            default:
-                                print("\(key): (unknow type)")
-                            }
-                            
-                        }
-                            
-                            
+            for JSON_OBJECT in array {
+                guard let dictionary = JSON_OBJECT as? [String: Any] else { //將 JSON 物件轉成 key-value 陣列
+                    return
+                }
+                
+//                for (key, value) in dictionary {
+//                    switch value {
+//                    case is Int:
+//                        print("\(key): \(value)(Int)")
+//                    case is String:
+//                        print("\(key): \(value)(String)")
+//                    case is Bool:
+//                        print("\(key): \(value)(Bool)")
+//                    default:
+//                        print("\(key): (unknow type)")
+//                    }
+//                    
+//                }
+                
+                    
 //                            if let value = dictionary["id"] as? Int {
 //                                print("id: \(value)")
 //                            }
@@ -59,7 +58,7 @@ class ViewController: UIViewController {
 //                            } else {
 //                                print("homepage: null")//不知道原始格式之下的處理
 //                            }
-                    }
+            }
             }
 //            }
 //        }
@@ -75,35 +74,47 @@ class ViewController: UIViewController {
 //                print(ARRAY)
 //            }
             
-            if let JSON = response.result.value {
-                if let dictionary = JSON as? [String: Any] {//將 JSON 物件，轉成 dictionary 的 key:value 的陣列
-                    
-                    if let value = dictionary["origin"] as? String {
-                        print("解出 key 為 origin 的值")
-                        print(value)
-                    }
-                    
-                    if let value = dictionary["url"] as? String {
-                        print("解出 key 為 url 的值")
-                        print(value)
-                    }
-                    
-                    //要當做 JSON 物件再解一次
-                    if let headers_dictionary = dictionary["headers"] as? [String: Any] {
-                        for (key, value) in headers_dictionary {
-                            if let value_string = value as? String {
-                                print(key + ":" + value_string)
-                            }
-                        }
-                    }
-                    
-                    //不用解了，因為沒東西
-                    if let value = dictionary["args"] as? String {//解不出來，因為不是 String
-                        print("解出 key 為 args 的值")
-                        print(value)
-                    }
-                }
+            guard let JSON_OBJECT = response.result.value, let dictionary = JSON_OBJECT as? [String: Any] else{
+                return
             }
+            
+            let httpbinOrgJson3 = try? HttpbinOrgJson(dictionary: dictionary)
+            print(httpbinOrgJson3 as Any!)
+            print(HttpbinOrgJson())
+            
+            
+//            let httpbinOrgJson = HttpbinOrgJson(origin: origin, url: url)
+//            print(httpbinOrgJson)
+            
+//            if let JSON = response.result.value {
+//                if let dictionary = JSON as? [String: Any] {//將 JSON 物件，轉成 dictionary 的 key:value 的陣列
+//                    
+//                    if let value = dictionary["origin"] as? String {
+//                        print("解出 key 為 origin 的值")
+//                        print(value)
+//                    }
+//                    
+//                    if let value = dictionary["url"] as? String {
+//                        print("解出 key 為 url 的值")
+//                        print(value)
+//                    }
+//                    
+//                    //要當做 JSON 物件再解一次
+//                    if let headers_dictionary = dictionary["headers"] as? [String: Any] {
+//                        for (key, value) in headers_dictionary {
+//                            if let value_string = value as? String {
+//                                print(key + ":" + value_string)
+//                            }
+//                        }
+//                    }
+//                    
+//                    //不用解了，因為沒東西
+//                    if let value = dictionary["args"] as? String {//解不出來，因為不是 String
+//                        print("解出 key 為 args 的值")
+//                        print(value)
+//                    }
+//                }
+//            }
         }
     }
     

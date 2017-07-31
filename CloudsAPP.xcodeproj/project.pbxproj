@@ -14,6 +14,7 @@
 		27B555281F259ADA00A8D200 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27B555261F259ADA00A8D200 /* LaunchScreen.storyboard */; };
 		27B555661F25BB8400A8D200 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27B5553B1F25A5EE00A8D200 /* Alamofire.framework */; };
 		27B555671F25BB8400A8D200 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 27B5553B1F25A5EE00A8D200 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DD043CFB1F2ED7D300D9387B /* httpbin.org.json.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD043CFA1F2ED7D300D9387B /* httpbin.org.json.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +99,7 @@
 		27B555271F259ADA00A8D200 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		27B555291F259ADA00A8D200 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		27B5552F1F25A5EE00A8D200 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
+		DD043CFA1F2ED7D300D9387B /* httpbin.org.json.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = httpbin.org.json.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +140,7 @@
 				27B555241F259ADA00A8D200 /* Assets.xcassets */,
 				27B555261F259ADA00A8D200 /* LaunchScreen.storyboard */,
 				27B555291F259ADA00A8D200 /* Info.plist */,
+				DD043CFA1F2ED7D300D9387B /* httpbin.org.json.swift */,
 			);
 			path = CloudsAPP;
 			sourceTree = "<group>";
@@ -290,6 +293,7 @@
 			files = (
 				27B555201F259ADA00A8D200 /* ViewController.swift in Sources */,
 				27B5551E1F259ADA00A8D200 /* AppDelegate.swift in Sources */,
+				DD043CFB1F2ED7D300D9387B /* httpbin.org.json.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
