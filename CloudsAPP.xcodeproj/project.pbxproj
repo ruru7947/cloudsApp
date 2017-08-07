@@ -16,6 +16,8 @@
 		27B555671F25BB8400A8D200 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 27B5553B1F25A5EE00A8D200 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DD043CFB1F2ED7D300D9387B /* httpbin.org.json.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD043CFA1F2ED7D300D9387B /* httpbin.org.json.swift */; };
 		DD043D081F2F073400D9387B /* api.github.com.json.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD043D071F2F073400D9387B /* api.github.com.json.swift */; };
+		DDEFD2001F380D8B0063E360 /* Gloss.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDEFD1F71F380B520063E360 /* Gloss.framework */; };
+		DDEFD2011F380D8B0063E360 /* Gloss.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DDEFD1F71F380B520063E360 /* Gloss.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +77,48 @@
 			remoteGlobalIDString = F8111E3219A95C8B0040E7D1;
 			remoteInfo = "Alamofire iOS";
 		};
+		DDEFD1F61F380B520063E360 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DDEFD1E71F380B520063E360 /* Gloss.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DC39BF611B8A7AD200088CE0;
+			remoteInfo = Gloss;
+		};
+		DDEFD1F81F380B520063E360 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DDEFD1E71F380B520063E360 /* Gloss.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DCF3008A1BDCA3FF003FBF15;
+			remoteInfo = "Gloss MacOS";
+		};
+		DDEFD1FA1F380B520063E360 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DDEFD1E71F380B520063E360 /* Gloss.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A04168E71C0DF69900269A6A;
+			remoteInfo = "Gloss tvOS";
+		};
+		DDEFD1FC1F380B520063E360 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DDEFD1E71F380B520063E360 /* Gloss.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DC683ADB1C2C615D0035EAC3;
+			remoteInfo = "Gloss watchOS";
+		};
+		DDEFD1FE1F380B520063E360 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DDEFD1E71F380B520063E360 /* Gloss.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2FA4CE9A1C947E3000EB8AB8;
+			remoteInfo = GlossTests;
+		};
+		DDEFD2021F380D8B0063E360 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DDEFD1E71F380B520063E360 /* Gloss.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = DC39BF601B8A7AD200088CE0;
+			remoteInfo = Gloss;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -85,6 +129,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				27B555671F25BB8400A8D200 /* Alamofire.framework in Embed Frameworks */,
+				DDEFD2011F380D8B0063E360 /* Gloss.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -102,6 +147,7 @@
 		27B5552F1F25A5EE00A8D200 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
 		DD043CFA1F2ED7D300D9387B /* httpbin.org.json.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = httpbin.org.json.swift; sourceTree = "<group>"; };
 		DD043D071F2F073400D9387B /* api.github.com.json.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = api.github.com.json.swift; sourceTree = "<group>"; };
+		DDEFD1E71F380B520063E360 /* Gloss.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Gloss.xcodeproj; path = Gloss/Gloss.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +156,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				27B555661F25BB8400A8D200 /* Alamofire.framework in Frameworks */,
+				DDEFD2001F380D8B0063E360 /* Gloss.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,6 +166,7 @@
 		27B555111F259ADA00A8D200 = {
 			isa = PBXGroup;
 			children = (
+				DDEFD1E71F380B520063E360 /* Gloss.xcodeproj */,
 				27B5552F1F25A5EE00A8D200 /* Alamofire.xcodeproj */,
 				27B5551C1F259ADA00A8D200 /* CloudsAPP */,
 				27B5551B1F259ADA00A8D200 /* Products */,
@@ -162,6 +210,18 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		DDEFD1E81F380B520063E360 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DDEFD1F71F380B520063E360 /* Gloss.framework */,
+				DDEFD1F91F380B520063E360 /* Gloss.framework */,
+				DDEFD1FB1F380B520063E360 /* Gloss.framework */,
+				DDEFD1FD1F380B520063E360 /* Gloss.framework */,
+				DDEFD1FF1F380B520063E360 /* GlossTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -178,6 +238,7 @@
 			);
 			dependencies = (
 				27B555691F25BB8400A8D200 /* PBXTargetDependency */,
+				DDEFD2031F380D8B0063E360 /* PBXTargetDependency */,
 			);
 			name = CloudsAPP;
 			productName = CloudsAPP;
@@ -215,6 +276,10 @@
 				{
 					ProductGroup = 27B555301F25A5EE00A8D200 /* Products */;
 					ProjectRef = 27B5552F1F25A5EE00A8D200 /* Alamofire.xcodeproj */;
+				},
+				{
+					ProductGroup = DDEFD1E81F380B520063E360 /* Products */;
+					ProjectRef = DDEFD1E71F380B520063E360 /* Gloss.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -274,6 +339,41 @@
 			remoteRef = 27B555461F25A5EE00A8D200 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		DDEFD1F71F380B520063E360 /* Gloss.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Gloss.framework;
+			remoteRef = DDEFD1F61F380B520063E360 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		DDEFD1F91F380B520063E360 /* Gloss.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Gloss.framework;
+			remoteRef = DDEFD1F81F380B520063E360 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		DDEFD1FB1F380B520063E360 /* Gloss.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Gloss.framework;
+			remoteRef = DDEFD1FA1F380B520063E360 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		DDEFD1FD1F380B520063E360 /* Gloss.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Gloss.framework;
+			remoteRef = DDEFD1FC1F380B520063E360 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		DDEFD1FF1F380B520063E360 /* GlossTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = GlossTests.xctest;
+			remoteRef = DDEFD1FE1F380B520063E360 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
@@ -308,6 +408,11 @@
 			isa = PBXTargetDependency;
 			name = "Alamofire iOS";
 			targetProxy = 27B555681F25BB8400A8D200 /* PBXContainerItemProxy */;
+		};
+		DDEFD2031F380D8B0063E360 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Gloss;
+			targetProxy = DDEFD2021F380D8B0063E360 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -431,6 +536,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = CloudsAPP/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.CloudsAPP;
@@ -444,6 +550,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = CloudsAPP/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.CloudsAPP;

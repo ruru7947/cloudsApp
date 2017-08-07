@@ -1,5 +1,6 @@
 import Foundation
-import  Alamofire
+import Alamofire
+import Gloss
 
 struct ApiGithubComJson {
     let id: Int
