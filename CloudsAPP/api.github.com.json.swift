@@ -2,33 +2,37 @@ import Foundation
 import Alamofire
 import Gloss
 
-struct ApiGithubComJson {
-    
-    let id: Int
-    let name: String
-    let owner: ApiGithubComJsonOwner
-
-}
-
-struct ApiGithubComJsonOwner {
-    
-    let login: String
-    let id: Int
-    let site_admin: Bool
-    
-}
-
 struct ApiGithubComJsonGloss: Decodable {
     
     let id: Int?
     let name: String?
+    let owner: ApiGithubComJsonOwnerGloss?
     
     init?(json: JSON) {
         self.id = "id" <~~ json
         self.name = "name" <~~ json
+        self.owner = "owner" <~~ json
         
     }
+
 }
+
+struct ApiGithubComJsonOwnerGloss: Decodable {
+    
+    let login: String?
+    let id: Int?
+    let site_admin: Bool?
+    
+    init?(json: JSON) {
+        self.login = "login" <~~ json
+        self.id = "name" <~~ json
+        self.site_admin = "site_admin" <~~ json
+        
+    }
+    
+}
+
+
 
 //extension ApiGithubComJson {
 //    
