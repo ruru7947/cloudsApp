@@ -11,17 +11,17 @@ import Alamofire
 
 class ViewController: UIViewController {
     
-    var apiGitHubComJsons:[ApiGithubComJson] = []
+    var apiGitHubComJsonsGloss:[ApiGithubComJsonGloss] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        ApiGithubComJson.fetch(){
-            apiGitHubComJsons in
+        ApiGithubComJsonGloss.fetch(){
+            dataTransfer in
             
-            self.apiGitHubComJsons = apiGitHubComJsons
+            self.apiGitHubComJsonsGloss = dataTransfer
             print("fetch()完成後")
-            print(self.apiGitHubComJsons)
+            print(self.apiGitHubComJsonsGloss)
         }
         
     }
