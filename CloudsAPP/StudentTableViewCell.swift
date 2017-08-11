@@ -10,6 +10,12 @@ import UIKit
 
 class StudentTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var genderLabe: UILabel!
+    @IBOutlet weak var birthdayLabel: UILabel!
+    
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

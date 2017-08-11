@@ -9,60 +9,74 @@
 import UIKit
 
 class TableViewController: UITableViewController {
+    
+    var studentDatas = [StudentData]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //模擬從網路取得資料
+        loadSampleStudentDatas()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+
+    }
+    
+    //模擬從網路取得資料
+    func loadSampleStudentDatas() {
+        let studentData1 = StudentData(name: "ruru1", gender: "male", birth: "1990-04-07")
+        let studentData2 = StudentData(name: "ruru2", gender: "male", birth: "1990-05-07")
+        let studentData3 = StudentData(name: "ruru3", gender: "male", birth: "1990-06-07")
+        let studentData4 = StudentData(name: "ruru4", gender: "male", birth: "1990-07-07")
+        let studentData5 = StudentData(name: "ruru5", gender: "male", birth: "1990-08-07")
+        
+        studentDatas += [studentData1, studentData2, studentData3, studentData4, studentData5]
     }
 
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+   
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        return studentDatas.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! StudentTableViewCell
+        
+        let studentData = studentDatas[indexPath.row]
+        
+        cell.genderLabe.text = studentData.gender
+        cell.birthdayLabel.text = studentData.birth
+        cell.nameLabel.text = studentData.name
+       
         return cell
     }
-    */
+ 
 
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
+     
         return true
     }
     */
 
     /*
-    // Override to support editing the table view.
+   
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            // Delete the row from the data source
+     
             tableView.deleteRows(at: [indexPath], with: .fade)
         } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+     
         }    
     }
     */
@@ -75,9 +89,9 @@ class TableViewController: UITableViewController {
     */
 
     /*
-    // Override to support conditional rearranging of the table view.
+
     override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
+     
         return true
     }
     */
@@ -85,11 +99,9 @@ class TableViewController: UITableViewController {
     /*
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
+       override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     
+          }
     */
 
 }

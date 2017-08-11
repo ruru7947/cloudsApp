@@ -7,3 +7,10 @@
 //
 
 import Foundation
+
+struct StudentData {
+    
+    var name: String
+    var gender: String
+    var birth: String
+}
